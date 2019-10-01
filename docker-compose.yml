@@ -52,6 +52,7 @@ services:
 
 ### Workspace Utilities ##################################
     workspace:
+      restart: always
       build:
         context: ./workspace
         args:
@@ -142,6 +143,7 @@ services:
 
 ### PHP-FPM ##############################################
     php-fpm:
+      restart: always    
       build:
         context: ./php-fpm
         args:
@@ -266,6 +268,7 @@ services:
 
 ### NGINX Server #########################################
     nginx:
+      restart: always    
       build:
         context: ./nginx
         args:
@@ -404,6 +407,7 @@ services:
 
 ### MariaDB ##############################################
     mariadb:
+      restart: always    
       build:
         context: ./mariadb
         args:
@@ -653,6 +657,7 @@ services:
 
 ### phpMyAdmin ###########################################
     phpmyadmin:
+      restart: always
       build: ./phpmyadmin
       environment:
         - PMA_ARBITRARY=1
@@ -1168,6 +1173,7 @@ services:
 
 ### Docker-in-Docker ################################################
     docker-in-docker:
+      restart: always    
       image: docker:dind
       privileged: true
       volumes:
