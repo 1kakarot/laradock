@@ -42,7 +42,7 @@ USER root
 # Add a non-root user to prevent files being created with root permissions on host machine.
 ARG PUID=1000
 ENV PUID ${PUID}
-ARG PGID=1000
+ARG PGID=1002
 ENV PGID ${PGID}
 
 ARG CHANGE_SOURCE=false
